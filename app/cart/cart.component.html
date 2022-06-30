@@ -1,0 +1,14 @@
+<h3>Carrinho Angular</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div>
+
+<form [formGroup]="checkoutForm ">
+
+    <button class="button" type="submit" onclick="remToCart()">Finalizar Compra</button>
+    <button type="button" [routerLink]="'/'">
+      Voltar
+  </button>
+  </form>
